@@ -1,0 +1,298 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    display: block;
+}
+
+
+/* SEÇÃO HEADER */
+
+header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    display: flex;
+    height: 80px;
+    background-color: #001848;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
+
+.active {
+    background-color: black;
+}
+
+header h1 {
+    margin-left: 1rem;
+    color: #fff;
+}
+
+.header-container {
+    display: flex;
+    height: 260px;
+    width: 100%;
+}
+
+.titulo-main {
+    text-align: center;
+}
+
+.header-container .search {
+    font-size: 25px;
+    font-family: 'Lato', Helvetica, Arial;
+}
+
+.header-container .search-container {
+    position: inherit;
+    margin-left: 300px;
+    display: flex;
+    font-family: 'Lato', Helvetica, Arial;
+    height: 40px;
+}
+
+.header-container input {
+    width: 250px;
+    height: 100%;
+    font-size: 18px;
+    font-family: 'Lato', Helvetica, Arial;
+}
+
+.header-container button {
+    width: 40px;
+    font-size: 20px;
+    font-family: 'Lato', Helvetica, Arial;
+}
+
+
+/* CONTAINER MAIN / MENU  */
+
+.nav-bar-container {
+    display: flex;
+    height: 60px;
+    width: 100%;
+    margin-top: 20px;
+    position: sticky;
+    top: 75px;
+    border-radius: 2px;
+    background-color: #4c4c4c;
+}
+
+.nav-bar {
+    backdrop-filter: blur(15px);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    border-radius: 5px;
+}
+
+.section-camisas {
+    width: 200px;
+    font-size: 20px;
+}
+
+.section-chuteiras {
+    width: 200px;
+    font-size: 20px;
+}
+
+.section-contato {
+    width: 200px;
+    font-size: 20px;
+}
+
+.btn-camisas {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-chuteiras {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-contato {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-camisas:hover {
+    background-color: #282828;
+    transition: all 0.3s ease-in;
+    cursor: pointer
+}
+
+.btn-chuteiras:hover {
+    background-color: #282828;
+    transition: all 0.3s ease-in;
+    cursor: pointer
+}
+
+.btn-contato:hover {
+    background-color: #282828;
+    transition: all 0.3s ease-in;
+    cursor: pointer
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: white;
+}
+
+.sub-section {
+    display: flex;
+    opacity: 0;
+    height: 0px;
+    font-size: 0px;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    background-color: #4c4c4c;
+    text-decoration: none;
+    margin-top: 2px;
+    width: 100%;
+}
+
+.sub-brasil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    transition: all 0.1s ease;
+    height: 50px;
+}
+
+.sub-europa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    transition: all 0.1s ease;
+    height: 50px;
+}
+
+.sub-selecoes {
+    display: flex;
+    transition: all 0.1s ease-in-out;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+
+.sub-todos {
+    display: flex;
+    transition: all 0.1s ease-in-out;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+
+.sub-todos:hover {
+    background-color: #282828;
+    transition: all 0.3s ease-in;
+    cursor: pointer
+}
+
+.sub-brasil:hover {
+    background-color: #282828;
+    transition: all 0.3s ease-in;
+    cursor: pointer
+}
+
+.sub-europa:hover {
+    background-color: #282828;
+    transition: all 0.3s ease-in;
+    cursor: pointer
+}
+
+.sub-selecoes:hover {
+    background-color: #282828;
+    transition: all 0.3s ease-in;
+    cursor: pointer
+}
+
+
+/*SEÇÃO FOOTER */
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    background-color: #001848;
+}
+
+.footer p {
+    color: white;
+    margin-left: 200px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Hepta Slab', Helvetica, Arial;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width:840px) {
+    body {
+        flex-direction: column;
+    }
+    header {
+        display: flex;
+    }
+    .footer {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .footer p {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .nav-bar-container {
+        display: none;
+    }
+    .header-container {
+        height: 100%;
+    }
+    .header-container .menu-hamb {
+        display: block;
+    }
+    .header-container .search-container {
+        display: none;
+    }
+    .footer p {
+        font-size: 12px;
+        margin-left: 30px;
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+}

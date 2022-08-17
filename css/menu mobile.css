@@ -1,0 +1,86 @@
+.menu-hamb {
+    margin-top: 7px;
+    width: 50px;
+    height: 100%;
+    transition: 0.5s ease;
+    display: none;
+}
+
+.menu-hamb #menu-open {
+    position: absolute;
+    color: white;
+    margin-left: 15px;
+    margin-top: 7px;
+    font-size: 50px;
+    transition: all 0.3s ease;
+}
+
+.menu-hamb #menu-close {
+    position: absolute;
+    color: white;
+    margin-left: 15px;
+    margin-top: 7px;
+    opacity: 0;
+    font-size: 50px;
+    transition: all 0.3s ease;
+}
+
+.menu-hamb-click #menu-open {
+    opacity: 0;
+}
+
+.menu-hamb-click #menu-close {
+    opacity: 1;
+}
+
+.dropDown {
+    width: 0;
+    height: 0;
+    display: flex;
+    position: fixed;
+    opacity: 0;
+    flex-direction: column;
+    transition: 0.2s ease-in;
+}
+
+.dropDown a {
+    border: 1px solid gray;
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 100%;
+    height: 50px;
+}
+
+.showMenu {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    opacity: 1;
+    margin-top: 75px;
+    z-index: 1;
+    flex-direction: column;
+    transition: 0.5s ease-in-out;
+}
+
+.showMenu a {
+    border-bottom: 1px solid white;
+    display: flex;
+    font-family: 'Lato', Helvetica, Arial;
+    font-size: 20px;
+    color: white;
+    background-color: #272d4d;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 100%;
+    height: 50px;
+}
+
+.showMenu a:hover {
+    background-color: black;
+    transition: 0.5s ease;
+}

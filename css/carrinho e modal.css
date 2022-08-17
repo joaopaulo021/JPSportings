@@ -1,0 +1,574 @@
+    @import url('https://fonts.googleapis.com/css?family=Hepta+Slab:400,700|Lato:400,700&display=swap');
+    body {
+        background-color: #f5f5f5;
+        font-family: 'Lato', Helvetica, Arial;
+        font-size: 15px;
+        margin: 0px;
+        min-height: 100vh;
+    }
+    
+    .models {
+        display: none;
+    }
+    
+    .menu-openner {
+        margin-right: 15px;
+        font-size: 26px;
+        opacity: 0.9;
+        background-color: #84bfc3;
+        color: black;
+        padding: 5px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .menu-openner:hover {
+        opacity: 1;
+    }
+    
+    .menu-openner i {
+        color: white;
+        font-size: 25px;
+    }
+    
+    .menu-openner span {
+        margin-right: 10px;
+    }
+    
+    .menu-closer {
+        margin-top: 15px;
+        width: 32px;
+        height: 32px;
+        display: none;
+        font-size: 30px;
+    }
+    
+    aside {
+        background-color: #737373;
+        width: 0vw;
+        display: flex;
+        justify-content: center;
+        font-family: 'Hepta Slab', Helvetica, Arial;
+        transition: all ease .2s;
+        overflow-x: hidden;
+    }
+    
+    aside.show {
+        width: 30vw;
+        display: flex;
+    }
+    
+    .cart--area {
+        margin-top: 50px;
+        padding: 20px;
+        width: 100%;
+    }
+    
+    .cart--area h1 {
+        display: relative;
+    }
+    
+    main {
+        padding: 0px;
+        width: 100%;
+        display: flex;
+        left: 0;
+        border: 1px solid gray;
+    }
+    
+    .main-container {
+        display: flex;
+    }
+    
+    h1,
+    h2 {
+        font-family: 'Hepta Slab', Helvetica, Arial;
+        text-align: center;
+    }
+    
+    .card-item a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+    }
+    
+    .card-item--img {
+        width: 200px;
+        height: 200px;
+        background-color: #EEE;
+        border-radius: 100px;
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.2);
+    }
+    
+    .card-item--img img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .card-item--add {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 25px;
+        background-color: #d32f2f;
+        text-align: center;
+        color: #FFF;
+        font-size: 22px;
+        cursor: pointer;
+        margin-top: -25px;
+        transition: all ease .2s;
+    }
+    
+    .card-item a:hover .card-item--add {
+        background-color: #b71c1c;
+    }
+    
+    .card-item--price {
+        font-size: 15px;
+        color: #333;
+        margin-top: 5px;
+    }
+    
+    .card-item--name {
+        font-size: 20px;
+        font-weight: bold;
+        color: #000;
+        margin-top: 5px;
+    }
+    
+    .card-item--desc {
+        font-size: 13px;
+        color: #555;
+        margin-top: 10px;
+    }
+    
+    .cardWindowArea {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.5);
+        display: none;
+        transition: all ease .5s;
+        justify-content: center;
+        align-items: center;
+        overflow-y: auto;
+    }
+    
+    .cardWindowBody {
+        width: 900px;
+        background-color: #FFF;
+        border-radius: 10px;
+        box-shadow: 0px 0px 15px #999;
+        display: flex;
+        margin: 20px 0px;
+    }
+    
+    .cardBig {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .cardBig--back {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-color: #000;
+    }
+    
+    .cardBig img {
+        height: 400px;
+        margin-top: 20px;
+        opacity: 0.9;
+        width: auto;
+        border-radius: 10px;
+        box-shadow: 0 0 1em #1d1d1d;
+    }
+    
+    .back {
+        display: none;
+    }
+    
+    .front {
+        display: block;
+    }
+    
+    .frente {
+        border: 1px solid black;
+        background-color: #f5f5f5;
+        font-family: 'Lato', Helvetica, Arial;
+        width: 150px;
+        height: 30px;
+        color: black;
+        text-align: center;
+        opacity: 0.8;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    
+    .verso {
+        border: 1px solid black;
+        background-color: #f5f5f5;
+        font-family: 'Lato', Helvetica, Arial;
+        border-radius: 5px;
+        opacity: 0.9;
+        color: black;
+        width: 150px;
+        text-align: center;
+        cursor: pointer;
+        margin-top: 10px
+    }
+    
+    .frente:hover {
+        opacity: 1.0;
+        background-color: #5b5b5b;
+        color: #f5f5f5;
+    }
+    
+    .verso:hover {
+        background-color: #5b5b5b;
+        opacity: 1.0;
+        color: #f5f5f5;
+    }
+    
+    .cardBig img:hover {
+        opacity: 1;
+    }
+    
+    .cardInfo {
+        flex: 1;
+        font-family: 'Hepta Slab', Helvetica, Arial;
+        padding-bottom: 20px;
+    }
+    
+    .cardInfo h1 {
+        margin-top: 50px;
+    }
+    
+    .cardBig h1 {
+        display: none;
+    }
+    
+    .cardInfo--sector {
+        color: #CCC;
+        text-transform: uppercase;
+        font-size: 14px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    
+    .cardInfo--sizes {
+        display: inline-flex;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    
+    .cardInfo--size {
+        padding: 10px 15px;
+        color: #000;
+        background-color: #EEE;
+        font-size: 13px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    .cardInfo--size:hover {
+        background-color: #CCC;
+    }
+    
+    .cardInfo--size.selected {
+        background-color: #737373;
+        color: #FFF;
+    }
+    
+    .cardInfo--size.selected span {
+        color: #D6D6D6;
+    }
+    
+    .cardInfo--size span {
+        font-size: 12px;
+        color: #999;
+        font-weight: normal;
+    }
+    
+    .cardInfo--price {
+        display: flex;
+        align-items: center;
+    }
+    
+    .cardInfo--actualPrice {
+        font-size: 28px;
+        margin-right: 30px;
+    }
+    
+    .cardInfo--qtarea {
+        display: inline-flex;
+        background-color: #EEE;
+        border-radius: 10px;
+        height: 30px;
+    }
+    
+    .cardInfo--qtarea button {
+        border: 0;
+        background-color: transparent;
+        font-size: 17px;
+        outline: 0;
+        cursor: pointer;
+        padding: 0px 10px;
+        color: #333;
+    }
+    
+    .cardInfo--qt {
+        line-height: 30px;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 0px 5px;
+        color: #000;
+    }
+    
+    .cardInfo--addButton {
+        margin-top: 30px;
+        padding: 20px 30px;
+        border-radius: 20px;
+        background-color: #32a345;
+        color: #FFF;
+        display: inline-block;
+        cursor: pointer;
+        margin-right: 30px;
+    }
+    
+    .cardInfo--addButton:hover {
+        background-color: #48d05f;
+    }
+    
+    .cardInfo--cancelButton {
+        display: inline-block;
+        cursor: pointer;
+    }
+    
+    .cardInfo--cancelMobileButton {
+        display: none;
+        height: 40px;
+        text-align: center;
+        font-size: 20px;
+        line-height: 40px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+    
+    .cart {
+        margin-bottom: 20px;
+    }
+    
+    .cart--item {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+    }
+    
+    .cart--item img {
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+    }
+    
+    .cart--item-nome {
+        flex: 1;
+    }
+    
+    .cart--item--qtarea {
+        display: inline-flex;
+        background-color: #EEE;
+        border-radius: 10px;
+        height: 30px;
+    }
+    
+    .cart--item--qtarea button {
+        border: 0;
+        background-color: transparent;
+        font-size: 17px;
+        outline: 0;
+        cursor: pointer;
+        padding: 0px 10px;
+        color: #333;
+    }
+    
+    .cart--item--qt {
+        line-height: 30px;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 0px 5px;
+        color: #000;
+    }
+    
+    .cart--totalitem {
+        padding: 15px 0;
+        border-top: 1px solid #282828;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        font-size: 15px;
+    }
+    
+    .cart--totalitem span:first-child {
+        font-weight: bold;
+    }
+    
+    .cart--totalitem.big {
+        font-size: 20px;
+        color: #000;
+        font-weight: bold;
+    }
+    
+    .cart--finalizar {
+        padding: 20px 30px;
+        border-radius: 20px;
+        background-color: #35af4a;
+        color: #FFF;
+        cursor: pointer;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 20px;
+        border: 2px solid #63f77c;
+        transition: all ease .2s;
+    }
+    
+    .frente-verso {
+        display: flex;
+        flex-direction: row;
+        width: 350px;
+        margin-bottom: 10px;
+        justify-content: space-between;
+    }
+    
+    .frente-verso p {
+        margin-top: 4px;
+    }
+    
+    .cart--finalizar:hover {
+        background-color: #48d05f;
+    }
+    /* MEDIA QUERIES */
+    
+    @media (max-width:1000px) {
+        .card-area {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+    @media (max-width:840px) {
+        .card-area {
+            display: block;
+        }
+        .card-item {
+            max-width: 100%;
+        }
+        aside {
+            width: auto;
+            position: fixed;
+            left: 100vw;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            transition: all ease .2s;
+        }
+        aside.show {
+            width: auto;
+        }
+        .cart--area {
+            width: 100vw;
+        }
+        .menu-closer {
+            display: block;
+        }
+        .cardWindowArea {
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        .cardWindowBody {
+            width: 100%;
+            display: block;
+            padding: 20px;
+            border-radius: 0;
+            box-shadow: none;
+            margin: 0;
+        }
+        .cardInfo h1 {
+            margin-top: 20px;
+        }
+        .cardInfo--qtarea {
+            height: 60px;
+        }
+        .cardInfo--qtarea button {
+            font-size: 25px;
+            padding: 0px 25px;
+        }
+        .cardInfo--qt {
+            line-height: 60px;
+            font-size: 20px;
+        }
+        .cardInfo--addButton {
+            font-size: 20px;
+            display: block;
+            background-color: #48d05f;
+            text-align: center;
+            margin: 30px auto;
+        }
+        .cardInfo--cancelButton {
+            display: none;
+        }
+        .cardInfo--cancelMobileButton {
+            display: block;
+        }
+        .cardBig {
+            margin-top: 60px;
+        }
+        .cardBig img {
+            width: 100%;
+            height: 300px;
+            opacity: 1;
+            margin-top: 10px;
+        }
+        .frente-verso {
+            justify-content: center;
+        }
+        .cardInfo h1 {
+            display: none;
+            margin-top: 50px;
+        }
+        .cardBig h1 {
+            display: block;
+        }
+        .frente {
+            margin-right: 30px;
+        }
+        .btn_social ul {
+            display: block;
+            width: 100%;
+        }
+    }
+    
+    @media (max-width:450px) {
+        .menu-openner {
+            font-size: 1.5rem;
+        }
+    }
+    
+    @media (max-width:380px) {
+        header h1 {
+            font-size: 1rem;
+        }
+        .menu-openner {
+            font-size: 1.5rem;
+        }
+    }
+    
+    #img-logo {
+        width: 50px;
+    }

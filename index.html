@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JP Sportings</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/carrossel.css" />
+    <link rel="stylesheet" href="./css/cards.css" />
+    <link rel="stylesheet" href="./css/carrinho e modal.css" />
+    <link rel="stylesheet" href="./css/menu mobile.css" />
+    <link rel="stylesheet" type="text/css" href="css/btns redes sociais.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts-icones.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
+</head>
+
+<body>
+    <div class="models">
+        <div class="card">
+            <div class="card-header ">
+                <h3></h3>
+                <p></p>
+            </div>
+            <div class="card-img">
+                <img src="">
+            </div>
+            <div class="card-details ">
+                <div class="price ">
+                    <p>Preço</p>
+                    <div class="priceItem">R$ --</div>
+                </div>
+                <div class="card-footer ">
+                    <button> Adicionar <i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart--item">
+            <img src="" />
+            <div class="cart--item-nome">--</div>
+            <div class="cart--item--qtarea">
+                <button class="cart--item-qtmenos">-</button>
+                <div class="cart--item--qt">1</div>
+                <button class="cart--item-qtmais">+</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-container">
+        <header>
+            <div class="menu-hamb">
+                <i id="menu-open" class="fa fa-bars"></i>
+                <i id="menu-close" class="fa fa-times"></i>
+
+                <div class="dropDown">
+
+                    <div onclick="filterProduct('Todos')" class="sub-todos">
+                        <a href="#">Todos</a>
+                    </div>
+
+                    <div onclick="filterProduct('Brasil')" class="sub-brasil">
+                        <a href="#">Brasil</a>
+                    </div>
+
+                    <div onclick="filterProduct('Europa')" class="sub-europa">
+                        <a href="#">Europa</a>
+                    </div>
+                    <div onclick="filterProduct('Selecoes')" class="sub-selecoes">
+                        <a href="#">Seleçoes</a>
+                    </div>
+
+                    <div onclick="filterProduct('Chuteiras')" class="sub-chuteiras">
+                        <a href="#">Chuteiras</a>
+                    </div>
+                    <div class="btn-contato">
+                        <a href="#footer-container">Contato</a>
+                    </div>
+                </div>
+            </div>
+
+            <h1>JP Sportings</h1>
+            <span class="search-container"><input type="search" id="search-input" placeholder="Digite o nome do seu time!"><button class="search">🔍</button></span>
+            <div class="menu-openner"><span>0</span><i class="fas fa-shopping-cart"></i></div>
+        </header>
+
+        <div id="carosel-container">
+            <div class="carosel">
+                <img class="img1" src="./images/carrossel/foto1.png">
+            </div>
+            <span onclick="next()" class="right-btn">❯</span>
+            <span onclick="previous()" class="left-btn">❮</span>
+        </div>
+    </div>
+
+    <nav class="nav-bar-container">
+        <nav class="nav-bar">
+            <div class="section-camisas">
+                <div class="btn-camisas">
+                    <a href="#">Times</a>
+                </div>
+                <div class="sub-section">
+                    <div onclick="filterProduct('Todos')" class="sub-todos">
+                        <a href="#">Todos</a>
+                    </div>
+                    <div onclick="filterProduct('Brasil')" class="sub-brasil">
+                        <a href="#">Brasil</a>
+                    </div>
+                    <div onclick="filterProduct('Europa')" class="sub-europa">
+                        <a href="#">Europa</a>
+                    </div>
+                    <div onclick="filterProduct('Selecoes')" class="sub-selecoes">
+                        <a href="#">Seleçoes</a>
+                    </div>
+                </div>
+            </div>
+            <div onclick="filterProduct('Chuteiras')" class="section-chuteiras">
+                <div class="btn-chuteiras">
+                    <a href="#">Chuteiras</a>
+                </div>
+            </div>
+
+            <div class="section-contato">
+                <div class="btn-contato">
+                    <a href="#footer-container">Contato</a>
+                </div>
+            </div>
+        </nav>
+    </nav>
+
+    <h1 class="titulo-main">Escolha a sua !</h1>
+
+    <div class="main-container">
+
+        <main>
+
+            <div class="cards"></div>
+            <aside>
+                <div class="cart--area">
+                    <div class="menu-closer">❌</div>
+                    <h1>Seus Produtos</h1>
+                    <div class="cart"></div>
+                    <div class="cart--details">
+                        <div class="cart--totalitem subtotal">
+                            <span>Subtotal</span>
+                            <span>R$ --</span>
+                        </div>
+                        <div class="cart--totalitem desconto">
+                            <span>Desconto</span>
+                            <span>R$ --</span>
+                        </div>
+                        <div class="cart--totalitem total big">
+                            <span>Total</span>
+                            <span>R$ --</span>
+                        </div>
+                        <div class="cart--finalizar">Finalizar a compra</div>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <!-- janela modal .cardWindowArea -->
+    <div class="cardWindowArea">
+        <div class="cardWindowBody">
+            <div class="cardBig">
+                <h1>--</h1>
+                <img class="front" src="">
+                <img class="back" src="">
+                <div class="frente-verso">
+                    <div class="frente">
+                        <p>Frente</p>
+                    </div>
+                    <div class="verso">
+                        <p>Verso</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardInfo">
+                <div class="cardInfo--sizearea">
+                    <h1>--</h1>
+                    <div class="cardInfo--sector">Tamanho</div>
+                    <div class="cardInfo--sizes">
+                        <div data-key="P" class="cardInfo--size"> <span>--</span> P </div>
+                        <div data-key="M" class="cardInfo--size"> <span>--</span> M </div>
+                        <div data-key="G" class="cardInfo--size selected"><span>--</span> G </div>
+                    </div>
+                </div>
+
+                <div class="cardInfo--pricearea">
+                    <div class="cardInfo--sector">Preço</div>
+                    <div class="cardInfo--price">
+                        <div class="cardInfo--actualPrice">R$ --</div>
+                        <div class="cardInfo--qtarea">
+                            <button class="cardInfo--qtmenos">-</button>
+                            <div class="cardInfo--qt">1</div>
+                            <button class="cardInfo--qtmais">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardInfo--addButton">Adicionar ao carrinho</div>
+                <div class="cardInfo--cancelMobileButton">Voltar</div>
+                <div class="cardInfo--cancelButton">Cancelar</div>
+            </div>
+        </div>
+    </div>
+    <!-- Fim janela modal .cardWindowArea -->
+
+    <section id="footer-container">
+        <div class="footer">
+            <p> Os preços, promoções, condições de pagamento, produtos e Fotos são meramente ilustrativos. Copyright © 2022 - Jp Sportings. Todos os direitos reservados. VENDA DE PRODUTOS ESPORTIVOS S.A. <br> CNPJ: 05.258.155/0001-03<br> Endereço: Rua Av
+                Duque de Caxias, nº 200, Centro <br> Cidade de Bauru - SP, CEP 17015-000. sac@jpsportings.com.br
+            </p>
+            <nav class="btn_social">
+                <ul>
+                    <li><a href="#" target="_blank" title="facebook"><i class="icon icon-facebook"></i></a></li>
+                    <li><a href="#" target="_blank" title="instagram"><i class="icon icon-instagram"></i></a></li>
+                    <li><a href="#" target="_blank" title="youtube"><i class="icon icon-whatsapp"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <script src="./javascript/camisetas.js"></script>
+    <script src="./javascript/carrinho.js"></script>
+    <script src="./javascript/botao navbar.js"></script>
+    <script src="./javascript/carrossel.js"></script>
+    <script src="./javascript/botao search.js"></script>
+    <script src="./javascript/menu mobile.js"></script>
+</body>
+
+</html>
